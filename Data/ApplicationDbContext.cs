@@ -11,4 +11,5 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
     public DbSet<QuintrixHomeworkPlayerMVP.Models.Player>? Player { get; set; }
+    public DbSet<QuintrixHomeworkPlayerMVP.Models.Bot>? Bot { get; set; }
 }
