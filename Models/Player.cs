@@ -16,8 +16,11 @@ namespace QuintrixHomeworkPlayerMVP.Models
         public string Email
         {
             get=>_email;
-            set=>_email=ValidatedEmail(value);}
+            set=>_email=ValidatedEmail(value);
+        }
+        #pragma warning disable CS8618
         public Player(){}
+        #pragma warning restore CS8618
         private static string ValidatedEmail(string input)
         {
             // TBD blocks invalid emails sets field to empty?
