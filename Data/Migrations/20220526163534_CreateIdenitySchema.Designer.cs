@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuintrixHomeworkPlayerMVP.Data;
 
@@ -10,9 +11,10 @@ using QuintrixHomeworkPlayerMVP.Data;
 namespace QuintrixHomeworkPlayerMVP.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220526163534_CreateIdenitySchema")]
+    partial class CreateIdenitySchema
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.5");
@@ -237,9 +239,6 @@ namespace QuintrixHomeworkPlayerMVP.Data.Migrations
             modelBuilder.Entity("QuintrixHomeworkPlayerMVP.Models.Player", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
-
-                    b.Property<uint>("Currency")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
                         .IsRequired()
