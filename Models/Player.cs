@@ -5,7 +5,6 @@ namespace QuintrixHomeworkPlayerMVP.Models
     {
         [PersonalData]
         public string Name{get;set;}
-        [PersonalData]
         public uint Currency{get;set;}
         #pragma warning disable CS8618
         public Player(){}
