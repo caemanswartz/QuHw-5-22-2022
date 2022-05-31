@@ -18,6 +18,7 @@ using QuintrixHomeworkPlayerMVP.Models;
 
 namespace QuintrixHomeworkPlayerMVP.Areas.Identity.Pages.Account
 {
+    [AllowAnonymous]
     public class LoginModel : PageModel
     {
         private readonly SignInManager<Player> _signInManager;
